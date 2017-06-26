@@ -36,8 +36,25 @@
 
 
 
-    <!--<mvc:view-controller path="/about.html" view-name="/about/about"/>-->
-    <mvc:view-controller path="/index.html" view-name="/index"/>
 
+
+    <!-- File Upload bean config-->
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <!-- set the maximum file size in bytes -->
+        <property name="maxUploadSize" value="1000000"/>
+    </bean>
+
+    <!--Excel and PDF xml view configuration -->
+    <bean class="org.springframework.web.servlet.view.XmlViewResolver">
+        <property name="order" value="0" />
+        <property name="location">
+            <value>/WEB-INF/excel-pdf-config.xml</value>
+        </property>
+    </bean>
+
+
+    <mvc:view-controller path="/index.html" view-name="/index"/>
+    <!--<mvc:view-controller path="/about.html" view-name="/about/about"/>-->
+    <mvc:view-controller path="/file.html" view-name="/file/file"/>
 
 </beans>
