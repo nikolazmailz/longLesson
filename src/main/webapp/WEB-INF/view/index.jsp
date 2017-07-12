@@ -10,7 +10,7 @@
   <jsp:attribute name="title">Long Lessons</jsp:attribute>
 
   <jsp:body>
-
+ 
     <header id="myCarousel" class="carousel slide">
       <!-- Indicators -->
       <ol class="carousel-indicators">
