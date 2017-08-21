@@ -50,8 +50,10 @@
             <ul class="nav navbar-nav navbar-right">
                 <c:url value="/about.html" var="about"/>
                 <c:url value="/jdbc.html" var="jdbc"/>
+                <c:url value="/email.html" var="email"/>
                 <li><a href="${about}">About</a></li>
                 <li><a href="${jdbc}">jdbc</a></li>
+                <li><a href="${email}">email</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<b class="caret"></b></a>
                     <ul class="dropdown-menu">

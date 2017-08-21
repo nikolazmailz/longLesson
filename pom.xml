@@ -16,8 +16,10 @@
         <jstl.version>1.2</jstl.version>
         <servlet.version>3.1.0</servlet.version>
 
+        <slf4j.version>1.7.13</slf4j.version>
 
-        <spring-framework.version>4.3.9.RELEASE</spring-framework.version>
+
+        <spring-framework.version>4.2.4.RELEASE</spring-framework.version>
 
     </properties>
 
@@ -40,17 +42,22 @@
 
     <dependencies>
 
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>bootstrap</artifactId>
+            <version>3.3.6</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.webjars</groupId>
+            <artifactId>jquery</artifactId>
+            <version>1.11.1</version>
+        </dependency>
+
         <!-- Spring MVC -->
         <dependency>
             <groupId>org.springframework</groupId>
             <artifactId>spring-webmvc</artifactId>
-            <version>3.2.2.RELEASE</version>
-        </dependency>
-
-        <!-- Spring JDBC -->
-        <dependency>
-            <groupId>org.springframework</groupId>
-            <artifactId>spring-jdbc</artifactId>
         </dependency>
 
         <!-- Other Servlet Web dependencies -->
@@ -59,7 +66,7 @@
             <artifactId>jstl</artifactId>
             <version>${jstl.version}</version>
         </dependency>
-
+        <!--Servlet API-->
         <dependency>
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
@@ -72,19 +79,6 @@
             <artifactId>jsp-api</artifactId>
             <version>${jsp.version}</version>
             <scope>provided</scope>
-        </dependency>
-
-
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>bootstrap</artifactId>
-            <version>3.3.6</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.webjars</groupId>
-            <artifactId>jquery</artifactId>
-            <version>1.11.1</version>
         </dependency>
 
         <!-- Apache Commons File Upload -->
@@ -113,7 +107,6 @@
             <version>2.1.5</version>
         </dependency>
 
-
         <!-- HSQLDB embedded database. Встроенная база данных-->
         <dependency>
             <groupId>org.hsqldb</groupId>
@@ -121,12 +114,45 @@
             <version>2.3.3</version>
         </dependency>
 
+        <!-- Spring JDBC -->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-jdbc</artifactId>
+        </dependency>
+
+
+        <!-- Test Artifacts with Spring-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <scope>test</scope>
+        </dependency>
+
         <!-- Logging with SLF4J & LogBack -->
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.13</version>
+            <version>${slf4j.version}</version>
             <scope>compile</scope>
+        </dependency>
+
+        <!--Contains org.springframework.mail.javamail-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context-support</artifactId>
+            <version>${spring-framework.version}</version>
+        </dependency>
+
+        <!-- Spring MVC Mail Related Dependency -->
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>1.4.7</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.velocity</groupId>
+            <artifactId>velocity</artifactId>
+            <version>1.7</version>
         </dependency>
 
     </dependencies>
