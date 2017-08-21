@@ -49,7 +49,9 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <c:url value="/about.html" var="about"/>
+                <c:url value="/jdbc.html" var="jdbc"/>
                 <li><a href="${about}">About</a></li>
+                <li><a href="${jdbc}">jdbc</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">Tutorial<b class="caret"></b></a>
                     <ul class="dropdown-menu">
